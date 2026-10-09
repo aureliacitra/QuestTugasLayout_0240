@@ -76,3 +76,18 @@ fun HomeScreen() {
             color = colorResource(R.color.text_title)
         )
         Spacer(Modifier.height(dimensionResource(R.dimen.space_medium)))
+
+        Column(
+            modifier = Modifier.weight(1f),
+            verticalArrangement = Arrangement.spacedBy(dimensionResource(R.dimen.card_spacing))
+        ) {
+            daftarMahasiswa.forEach { MahasiswaCard(it) }
+        }
+
+        Text(
+            text = stringResource(R.string.copyright),
+            fontSize = dimensionResource(R.dimen.copyright_size).value.sp,
+            color = colorResource(R.color.text_title)
+        )
+    }
+}
