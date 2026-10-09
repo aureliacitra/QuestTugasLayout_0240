@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">TugasLayout</string>
     <string name="title">Teknologi Informasi</string>
+    <string name="university">Universitas Muhammadiyah Yogyakarta</string>
+    <string name="copyright">Copyright, 2026</string>
+    <string name="logo_desc">Logo UMY</string>
 
 </resources>
