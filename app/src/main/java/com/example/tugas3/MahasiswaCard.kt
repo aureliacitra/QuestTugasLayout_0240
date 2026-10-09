@@ -21,3 +21,14 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+
+@Composable
+fun MahasiswaCard(mahasiswa: Mahasiswa) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clip(RoundedCornerShape(dimensionResource(R.dimen.card_radius)))
+            .background(colorResource(mahasiswa.warnaCard))
+            .padding(dimensionResource(R.dimen.card_padding)),
+        verticalAlignment = Alignment.CenterVertically
+    )
