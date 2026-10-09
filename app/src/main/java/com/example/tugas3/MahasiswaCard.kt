@@ -31,4 +31,29 @@ fun MahasiswaCard(mahasiswa: Mahasiswa) {
             .background(colorResource(mahasiswa.warnaCard))
             .padding(dimensionResource(R.dimen.card_padding)),
         verticalAlignment = Alignment.CenterVertically
-    )
+    ) { LogoCard()
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(horizontal = dimensionResource(R.dimen.space_medium))
+        ) {
+            Text(
+                text = stringResource(mahasiswa.nama),
+                fontSize = dimensionResource(R.dimen.name_size).value.sp,
+                fontWeight = if (mahasiswa.namaCursive) FontWeight.Normal else FontWeight.Bold,
+                fontFamily = if (mahasiswa.namaCursive) FontFamily.Cursive else FontFamily.Default,
+                fontStyle = if (mahasiswa.namaCursive) FontStyle.Italic else FontStyle.Normal,
+                color = colorResource(R.color.text_white)
+            )
+            mahasiswa.telepon?.let {
+                Text(
+                    text = stringResource(it),
+                    fontSize = dimensionResource(R.dimen.detail_size).value.sp,
+                    color = colorResource(mahasiswa.warnaTelepon)
+                )
+            }
+            Text(
+                text = stringResource(mahasiswa.alamat),
+                fontSize = dimensionResource(R.dimen.detail_size).value.sp,
+                color = colorResource(mahasiswa.warnaAlamat)
+            )
