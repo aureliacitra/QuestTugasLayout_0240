@@ -57,3 +57,16 @@ fun MahasiswaCard(mahasiswa: Mahasiswa) {
                 fontSize = dimensionResource(R.dimen.detail_size).value.sp,
                 color = colorResource(mahasiswa.warnaAlamat)
             )
+        }
+        LogoCard()
+    }
+}
+
+@Composable
+private fun LogoCard() {
+    Image(
+        painter = painterResource(R.drawable.logo_umy),
+        contentDescription = stringResource(R.string.logo_desc),
+        modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
+    )
+}
