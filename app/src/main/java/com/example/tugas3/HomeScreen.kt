@@ -55,3 +55,24 @@ fun HomeScreen() {
         )
     )
 
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(colorResource(R.color.background_screen))
+            .padding(dimensionResource(R.dimen.screen_padding)),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Spacer(Modifier.height(dimensionResource(R.dimen.space_large)))
+        Text(
+            text = stringResource(R.string.title),
+            fontSize = dimensionResource(R.dimen.title_size).value.sp,
+            fontWeight = FontWeight.Bold,
+            color = colorResource(R.color.text_title)
+        )
+        Text(
+            text = stringResource(R.string.university),
+            fontSize = dimensionResource(R.dimen.subtitle_size).value.sp,
+            fontWeight = FontWeight.Bold,
+            color = colorResource(R.color.text_title)
+        )
+        Spacer(Modifier.height(dimensionResource(R.dimen.space_medium)))
